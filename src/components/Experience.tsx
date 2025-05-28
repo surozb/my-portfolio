@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin } from 'lucide-react';
+import { Bug, Calendar, CheckCircle, Code2, MapPin, ShieldCheck } from 'lucide-react';
 
 interface Job {
   id: number;
@@ -65,69 +65,40 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <section 
-      id="experience" 
-      className="py-20 bg-gray-50 dark:bg-gray-800"
-    >
+    <section id="experience" className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-white dark:from-gray-900 dark:via-blue-950 dark:to-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 text-center">
-            Work Experience
+        <div className="max-w-4xl mx-auto bg-white/90 dark:bg-gray-900/80 rounded-3xl shadow-2xl border border-blue-100 dark:border-blue-900 p-10">
+          <h2 className="text-3xl font-extrabold text-blue-800 dark:text-blue-300 mb-2 text-left font-mono flex items-center gap-2">
+            Experience <ShieldCheck className="inline-block text-blue-500 dark:text-blue-300" size={28} />
           </h2>
-          <div className="w-16 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-16"></div>
-          
-          <div className="relative">
-            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gray-300 dark:bg-gray-700"></div>
-            
-            <div className="space-y-12">
-              {jobs.map((job, index) => (
-                <div 
-                  key={job.id} 
-                  className={`relative flex flex-col md:flex-row ${
-                    index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                  }`}
-                >
-                  <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-600 dark:bg-blue-500 z-10 mt-6"></div>
-                  
-                  <div className="md:w-1/2 pl-8 md:pl-0 md:pr-12 md:text-right space-y-4">
-                    <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg transition-transform hover:scale-105 duration-300">
-                      <div className="flex items-center justify-between md:flex-row-reverse mb-4">
-                        <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                          <img 
-                            src={job.logo} 
-                            alt={job.company} 
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="ml-4 md:ml-0 md:mr-4">
-                          <h3 className="text-xl font-bold text-gray-900 dark:text-white">{job.title}</h3>
-                          <p className="text-blue-600 dark:text-blue-400 font-medium">{job.company}</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center gap-2 mb-2 md:justify-end text-gray-600 dark:text-gray-400 text-sm">
-                        <Calendar size={16} />
-                        <span>{job.startDate} - {job.endDate}</span>
-                      </div>
-                      
-                      <div className="flex items-center gap-2 mb-4 md:justify-end text-gray-600 dark:text-gray-400 text-sm">
-                        <MapPin size={16} />
-                        <span>{job.location}</span>
-                      </div>
-                      
-                      <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 md:text-right">
-                        {job.description.map((item, i) => (
-                          <li key={i} className="md:list-none">{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  
-                  <div className="hidden md:block md:w-1/2"></div>
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-green-400 dark:from-blue-400 dark:to-green-300 mb-8 rounded-full"></div>
+          <ul className="space-y-8">
+            {jobs.map((job, index) => (
+              <li key={job.id} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow border border-blue-100 dark:border-blue-800 flex flex-col md:flex-row gap-4 items-center">
+                <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                  <img 
+                    src={job.logo} 
+                    alt={job.company} 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              ))}
-            </div>
-          </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-blue-700 dark:text-blue-300 mb-1">{job.title}</h3>
+                  <p className="text-gray-700 dark:text-gray-300 mb-1">{job.company}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{job.startDate} - {job.endDate}</p>
+                  <div className="flex items-center gap-2 mb-2 text-gray-600 dark:text-gray-400 text-sm">
+                    <MapPin size={16} />
+                    <span>{job.location}</span>
+                  </div>
+                  <ul className="list-disc ml-5 mt-2 text-gray-700 dark:text-gray-300 text-base">
+                    {job.description.map((item, i) => (
+                      <li key={i} className="md:list-none">{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

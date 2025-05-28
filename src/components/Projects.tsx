@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { Bug, CheckCircle, Code2, ExternalLink, Github, ShieldCheck } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -82,14 +82,14 @@ const Projects: React.FC = () => {
   return (
     <section 
       id="projects" 
-      className="py-20 bg-white dark:bg-gray-900"
+      className="py-20 bg-gradient-to-br from-blue-50 via-green-50 to-white dark:from-blue-950 dark:via-green-950 dark:to-gray-900"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 text-center">
-            My Projects
+        <div className="max-w-4xl mx-auto bg-white/90 dark:bg-gray-900/80 rounded-3xl shadow-2xl border border-blue-100 dark:border-blue-900 p-10">
+          <h2 className="text-3xl font-extrabold text-blue-800 dark:text-blue-300 mb-2 text-left font-mono flex items-center gap-2">
+            Projects <Bug className="inline-block text-blue-500 dark:text-blue-300" size={28} />
           </h2>
-          <div className="w-16 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-10"></div>
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-green-400 dark:from-blue-400 dark:to-green-300 mb-8 rounded-full"></div>
           
           {/* Filter Tabs */}
           <div className="flex flex-wrap justify-center gap-2 mb-12">
@@ -109,11 +109,11 @@ const Projects: React.FC = () => {
           </div>
           
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {filteredProjects.map((project) => (
               <div 
                 key={project.id} 
-                className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow border border-blue-100 dark:border-blue-800 flex flex-col gap-2"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img 
@@ -124,8 +124,8 @@ const Projects: React.FC = () => {
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                    {project.title}
+                  <h3 className="text-xl font-bold text-blue-700 dark:text-blue-300 mb-1 flex items-center gap-2">
+                    <CheckCircle size={18}/> {project.title}
                   </h3>
                   
                   <p className="text-gray-700 dark:text-gray-300 mb-4">
