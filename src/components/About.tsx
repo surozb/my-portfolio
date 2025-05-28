@@ -17,7 +17,7 @@ const About: React.FC = () => {
             <div className="md:w-1/3 flex-shrink-0">
               <div className="rounded-full overflow-hidden border-4 border-blue-600 dark:border-blue-400 w-64 h-64 mx-auto">
                 <img 
-                  src="/src/assets/IMG_7296.jpg" 
+                  src="/assets/IMG_7296.jpg" 
                   alt="Profile with hat" 
                   className="w-full h-full object-cover"
                 />
