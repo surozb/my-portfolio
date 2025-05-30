@@ -55,74 +55,51 @@ const Contact: React.FC = () => {
             Contact <ShieldCheck className="inline-block text-green-500 dark:text-green-300" size={28} />
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-green-600 to-blue-400 dark:from-green-400 dark:to-blue-300 mb-8 rounded-full"></div>
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed text-center">
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed text-center">
             Interested in collaborating or have a question? Reach out and let's connect!
           </p>
-          <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
-            <div className="mb-6">
-              <label 
-                htmlFor="name" 
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-              >
-                Your Name
-              </label>
+          <form onSubmit={handleSubmit} className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex flex-col gap-2">
+              <label htmlFor="name" className="text-sm font-semibold text-gray-700 dark:text-gray-200">Your Name</label>
               <input
-                type="text"
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="px-4 py-2 rounded-lg border border-green-200 dark:border-green-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-400"
+                className="px-4 py-2 rounded-lg border border-green-200 dark:border-green-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+                type="text"
                 placeholder="Your Name"
               />
             </div>
-            
-            <div className="mb-6">
-              <label 
-                htmlFor="email" 
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-              >
-                Your Email
-              </label>
+            <div className="flex flex-col gap-2">
+              <label htmlFor="email" className="text-sm font-semibold text-gray-700 dark:text-gray-200">Your Email</label>
               <input
-                type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="px-4 py-2 rounded-lg border border-green-200 dark:border-green-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-400"
+                className="px-4 py-2 rounded-lg border border-green-200 dark:border-green-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+                type="email"
                 placeholder="Your Email"
               />
             </div>
-            
-            <div className="mb-6">
-              <label 
-                htmlFor="subject" 
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-              >
-                Subject
-              </label>
+            <div className="flex flex-col gap-2 md:col-span-2">
+              <label htmlFor="subject" className="text-sm font-semibold text-gray-700 dark:text-gray-200">Subject</label>
               <input
-                type="text"
                 id="subject"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="px-4 py-2 rounded-lg border border-green-200 dark:border-green-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-400"
+                className="px-4 py-2 rounded-lg border border-green-200 dark:border-green-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+                type="text"
                 placeholder="Subject"
               />
             </div>
-            
-            <div className="mb-6">
-              <label 
-                htmlFor="message" 
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-              >
-                Message
-              </label>
+            <div className="flex flex-col gap-2 md:col-span-2">
+              <label htmlFor="message" className="text-sm font-semibold text-gray-700 dark:text-gray-200">Message</label>
               <textarea
                 id="message"
                 name="message"
@@ -130,42 +107,31 @@ const Contact: React.FC = () => {
                 onChange={handleChange}
                 required
                 rows={4}
-                className="px-4 py-2 rounded-lg border border-green-200 dark:border-green-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-400 resize-none"
+                className="px-4 py-2 rounded-lg border border-green-200 dark:border-green-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-400 transition resize-none"
                 placeholder="Your Message"
               ></textarea>
             </div>
-            
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className={`mt-4 px-6 py-2 bg-gradient-to-r from-green-600 to-blue-500 text-white rounded-lg font-bold shadow-lg hover:from-green-700 hover:to-blue-600 transition-all flex items-center gap-2 justify-center ${
-                isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
-              }`}
-            >
-              {isSubmitting ? (
-                <>
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  Sending...
-                </>
-              ) : (
-                <>
-                  <Send size={20} className="mr-2" /> Send Message
-                </>
-              )}
-            </button>
-            
-            {submitStatus && (
-              <div className={`mt-4 p-3 rounded-lg ${
-                submitStatus.success 
-                  ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' 
-                  : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
-              }`}>
-                {submitStatus.message}
-              </div>
-            )}
+            <div className="md:col-span-2 flex justify-end mt-4">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="px-8 py-3 bg-gradient-to-r from-green-600 to-blue-500 text-white rounded-lg font-bold shadow-lg hover:from-green-700 hover:to-blue-600 transition-all flex items-center gap-2 w-full md:w-auto justify-center md:justify-end"
+              >
+                {isSubmitting ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send size={20} /> Send Message
+                  </>
+                )}
+              </button>
+            </div>
           </form>
         </div>
       </div>
