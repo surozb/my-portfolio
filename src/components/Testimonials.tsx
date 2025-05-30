@@ -18,9 +18,10 @@ const Testimonials: React.FC = () => {
   const [successMsg, setSuccessMsg] = useState('');
 
   // Fetch testimonials from backend (only approved)
+  const API_URL = import.meta.env.VITE_API_URL;
   const fetchApprovedTestimonials = () => {
     setLoading(true);
-    fetch('http://localhost:5000/api/testimonials/approved')
+    fetch(`${API_URL}/api/testimonials/approved`)
       .then(res => res.json())
       .then(data => {
         setTestimonials(data);
@@ -56,7 +57,7 @@ const Testimonials: React.FC = () => {
     }
     setSubmitting(true);
     try {
-      const res = await fetch('http://localhost:5000/api/testimonials', {
+      const res = await fetch(`${API_URL}/api/testimonials`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, photo: form.photo || '/dummy-profile-pic-300x300.jpg' })

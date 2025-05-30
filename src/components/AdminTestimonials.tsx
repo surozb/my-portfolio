@@ -4,11 +4,12 @@ const AdminTestimonials: React.FC = () => {
   const [testimonials, setTestimonials] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const API_URL = import.meta.env.VITE_API_URL;
 
   // Fetch all testimonials (approved and unapproved)
   const fetchTestimonials = () => {
     setLoading(true);
-    fetch('http://localhost:5000/api/testimonials')
+    fetch(`${API_URL}/api/testimonials`)
       .then(res => res.json())
       .then(data => {
         setTestimonials(data);
@@ -27,12 +28,12 @@ const AdminTestimonials: React.FC = () => {
   }, []);
 
   const approveTestimonial = async (id: string) => {
-    await fetch(`http://localhost:5000/api/testimonials/${id}/approve`, { method: 'PATCH' });
+    await fetch(`${API_URL}/api/testimonials/${id}/approve`, { method: 'PATCH' });
     fetchTestimonials();
   };
 
   const deleteTestimonial = async (id: string) => {
-    await fetch(`http://localhost:5000/api/testimonials/${id}`, { method: 'DELETE' });
+    await fetch(`${API_URL}/api/testimonials/${id}`, { method: 'DELETE' });
     fetchTestimonials();
   };
 
