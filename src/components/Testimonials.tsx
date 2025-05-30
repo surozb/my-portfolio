@@ -32,8 +32,6 @@ const Testimonials: React.FC = () => {
 
   useEffect(() => {
     fetchApprovedTestimonials();
-    const interval = setInterval(fetchApprovedTestimonials, 5000); // Poll every 5 seconds
-    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
