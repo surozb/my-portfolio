@@ -43,6 +43,9 @@ const About: React.FC = () => {
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
               My approach combines technical expertise with strategic thinking to optimize testing processes and enhance product reliability. I'm passionate about staying current with the latest testing methodologies and automation tools to deliver the best possible results.
             </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              I am a dedicated Quality Assurance professional with hands-on experience in both manual and automated testing. My passion lies in ensuring software reliability, optimizing testing processes, and collaborating with teams to deliver high-quality digital solutions. I am committed to continuous learning and leveraging the latest tools, including AI, to drive innovation in QA.
+            </p>
             <div className="mt-8">
               <h3 className="text-xl font-bold text-blue-700 dark:text-blue-300 mb-2 font-mono flex items-center gap-2">
                 Tools & Technologies <CheckCircle className="inline-block text-green-500 dark:text-green-300" size={20} />

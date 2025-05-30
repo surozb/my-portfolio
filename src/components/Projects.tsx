@@ -17,58 +17,13 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'E-commerce Platform',
-      description: 'A full-featured online shopping platform with product catalog, cart functionality, and secure checkout.',
-      image: 'https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      tags: ['React', 'Node.js', 'MongoDB', 'Web'],
+      title: 'AI-Powered Portfolio Website',
+      description: 'This portfolio website was designed and developed using AI-assisted tools to showcase my skills and experience in software testing and quality assurance.',
+      image: 'https://images.pexels.com/photos/11035371/pexels-photo-11035371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      tags: ['AI', 'React', 'Portfolio', 'Web'],
       liveUrl: '#',
       githubUrl: '#'
-    },
-    {
-      id: 2,
-      title: 'Task Management App',
-      description: 'A productivity application for organizing tasks, setting priorities, and tracking progress.',
-      image: 'https://images.pexels.com/photos/5717479/pexels-photo-5717479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      tags: ['React', 'TypeScript', 'Firebase', 'Mobile'],
-      liveUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      id: 3,
-      title: 'Data Visualization Dashboard',
-      description: 'Interactive dashboard for visualizing complex datasets with customizable charts and filters.',
-      image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      tags: ['D3.js', 'React', 'Python', 'Data'],
-      liveUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      id: 4,
-      title: 'Fitness Tracking Application',
-      description: 'Mobile app for tracking workouts, nutrition, and health metrics with personalized insights.',
-      image: 'https://images.pexels.com/photos/3913025/pexels-photo-3913025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      tags: ['React Native', 'TypeScript', 'Mobile'],
-      liveUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      id: 5,
-      title: 'AI Content Generator',
-      description: 'Tool that leverages machine learning to generate creative content for various purposes.',
-      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      tags: ['Python', 'TensorFlow', 'AI', 'Web'],
-      liveUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      id: 6,
-      title: 'Social Media Analytics',
-      description: 'Platform for tracking and analyzing social media engagement, reach, and conversion metrics.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      tags: ['React', 'Node.js', 'Data', 'Web'],
-      liveUrl: '#',
-      githubUrl: '#'
-    },
+    }
   ];
 
   // Extract unique tags from projects

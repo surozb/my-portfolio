@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 interface HeaderProps {
@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             href="#hero" 
             className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-200"
           >
-            Portfolio
+            Suraj Maharjan | Portfolio
           </a>
 
           {/* Desktop Navigation */}

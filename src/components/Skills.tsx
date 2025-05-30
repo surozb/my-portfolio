@@ -12,31 +12,34 @@ const Skills: React.FC = () => {
           <div className="w-16 h-1 bg-gradient-to-r from-green-600 to-blue-400 dark:from-green-400 dark:to-blue-300 mb-8 rounded-full"></div>
           <div className="flex flex-wrap gap-4">
             <span className="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full text-base font-medium text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700">
-              <CheckCircle size={18}/> Test Automation (Playwright, Selenium, Cypress)
+              <CheckCircle size={18}/> Automated Testing (Playwright, Cypress)
             </span>
             <span className="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full text-base font-medium text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700">
-              <Code2 size={18}/> CI/CD with Jenkins
+              <Code2 size={18}/> CI/CD Pipeline Implementation (Jenkins)
             </span>
             <span className="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full text-base font-medium text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700">
-              <Bug size={18}/> Manual Testing
+              <Bug size={18}/> Manual Quality Assurance
             </span>
             <span className="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full text-base font-medium text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700">
-              <ShieldCheck size={18}/> Security Testing (Burp Suite)
+              <ShieldCheck size={18}/> Security Testing & Vulnerability Assessment (Burp Suite)
             </span>
             <span className="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full text-base font-medium text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700">
-              <Code2 size={18}/> JMeter
+              <Code2 size={18}/> Performance Testing (JMeter)
             </span>
             <span className="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full text-base font-medium text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700">
-              <ShieldCheck size={18}/> Postman
+              <ShieldCheck size={18}/> API Testing & Automation (Postman)
             </span>
             <span className="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full text-base font-medium text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700">
-              <CheckCircle size={18}/> Test Case Management
+              <CheckCircle size={18}/> Test Case Management & Documentation
             </span>
             <span className="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full text-base font-medium text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700">
               <Code2 size={18}/> Automation Integration with QASE
             </span>
             <span className="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full text-base font-medium text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700">
-              <CheckCircle size={18}/> GitHub
+              <CheckCircle size={18}/> Version Control (GitHub)
+            </span>
+            <span className="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full text-base font-medium text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700">
+              <Code2 size={18}/> AI-Driven Automation & Modern Web Development
             </span>
           </div>
         </div>

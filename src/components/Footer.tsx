@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
             <div className="mb-6 md:mb-0">
               <h2 className="text-2xl font-bold mb-2">Portfolio</h2>
               <p className="text-gray-400 max-w-md">
-                Creating meaningful digital experiences through innovative design and development.
+                Showcasing expertise in software testing, quality assurance, and leveraging AI-driven tools to deliver reliable and innovative digital solutions.
               </p>
             </div>
             
