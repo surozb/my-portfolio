@@ -79,6 +79,12 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             >
               Contact
             </a>
+            <a 
+              href="#braglist" 
+              className="text-gray-700 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 transition-colors duration-200"
+            >
+              Brag List
+            </a>
             <ThemeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
           </nav>
 
@@ -138,6 +144,13 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
+            </a>
+            <a 
+              href="#braglist" 
+              className="block text-gray-700 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 transition-colors duration-200 py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Brag List
             </a>
           </nav>
         )}
