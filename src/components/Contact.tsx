@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Bug, CheckCircle, Code2, ShieldCheck } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,13 +21,23 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+      
       setSubmitStatus({
         success: true,
         message: 'Your message has been sent successfully!'
@@ -39,12 +50,20 @@ const Contact: React.FC = () => {
         subject: '',
         message: ''
       });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setSubmitStatus({
+        success: false,
+        message: 'Failed to send message. Please try again later.'
+      });
+    } finally {
+      setIsSubmitting(false);
       
       // Clear status after 5 seconds
       setTimeout(() => {
         setSubmitStatus(null);
       }, 5000);
-    }, 1500);
+    }
   };
 
   return (
@@ -58,6 +77,20 @@ const Contact: React.FC = () => {
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed text-center">
             Interested in collaborating or have a question? Reach out and let's connect!
           </p>
+          
+          {submitStatus && (
+            <div className={`w-full p-4 mb-6 rounded-lg ${
+              submitStatus.success 
+                ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-200' 
+                : 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-200'
+            }`}>
+              <p className="flex items-center justify-center">
+                {submitStatus.success ? <CheckCircle className="mr-2" size={20} /> : <Bug className="mr-2" size={20} />}
+                {submitStatus.message}
+              </p>
+            </div>
+          )}
+          
           <form onSubmit={handleSubmit} className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-2">
               <label htmlFor="name" className="text-sm font-semibold text-gray-700 dark:text-gray-200">Your Name</label>
