@@ -46,15 +46,14 @@ const BragList: React.FC = () => {
             <h3 className="text-xl font-bold text-yellow-700 dark:text-yellow-400 mb-4 flex items-center">
               <CheckCircle className="mr-2" size={20} /> Skills & Professional Growth
             </h3>
-            <ul className="space-y-6 text-lg pl-3">
-              <li className="flex items-start gap-3 bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
+            <ul className="space-y-6 text-lg pl-3">              <li className="flex items-start gap-3 bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
                 <TrendingUp className="text-blue-500 mt-1 flex-shrink-0" size={24} />
                 <div>
                   <h4 className="font-semibold">InfoDevelopers: QA Foundation</h4>
                   <ul className="list-disc pl-6 text-base mt-2 space-y-2">
-                    <li>Created 200+ detailed test cases for the banking application, improving test coverage by 35%</li>
-                    <li>Generated comprehensive VAPT reports using Burp Suite, identifying and helping resolve 12 critical security vulnerabilities</li>
-                    <li>Performed load testing with JMeter that identified bottlenecks allowing the system to handle 40% more concurrent users</li>
+                    <li>Created numerous detailed test cases for banking applications, significantly improving test coverage</li>
+                    <li>Generated comprehensive VAPT reports using Burp Suite, identifying and helping resolve multiple critical security vulnerabilities</li>
+                    <li>Performed load testing with JMeter that identified bottlenecks, substantially improving system performance under load</li>
                   </ul>
                 </div>
               </li>
@@ -64,9 +63,9 @@ const BragList: React.FC = () => {
                 <div>
                   <h4 className="font-semibold">Yenya Soft: Automation Excellence</h4>
                   <ul className="list-disc pl-6 text-base mt-2 space-y-2">
-                    <li>Architected a CI/CD pipeline that reduced regression testing time by 70%</li>
-                    <li>Led the transition from manual to automated testing, reducing release validation time from 2 days to 4 hours</li>
-                    <li>Mentored 3 junior QA engineers on automation best practices and Cypress implementation</li>
+                    <li>Architected a CI/CD pipeline that dramatically reduced regression testing time</li>
+                    <li>Led the transition from manual to automated testing, cutting release validation time from days to hours</li>
+                    <li>Mentored junior QA engineers on automation best practices and Cypress implementation</li>
                   </ul>
                 </div>
               </li>
@@ -79,15 +78,14 @@ const BragList: React.FC = () => {
             <h3 className="text-xl font-bold text-yellow-700 dark:text-yellow-400 mb-4 flex items-center">
               <FileText className="mr-2" size={20} /> Key Projects & Achievements
             </h3>
-            <ul className="space-y-6 text-lg pl-3">
-              <li className="flex items-start gap-3 bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+            <ul className="space-y-6 text-lg pl-3">              <li className="flex items-start gap-3 bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
                 <CheckCircle className="text-yellow-600 mt-1 flex-shrink-0" size={24} />
                 <div>
                   <h4 className="font-semibold">Maitri Services: End-to-End Testing Framework</h4>
                   <ul className="list-disc pl-6 text-base mt-2 space-y-2">
-                    <li>Developed a Playwright automation framework with Page Object Model that achieved 85% test coverage</li> 
+                    <li>Developed a Playwright automation framework with Page Object Model that achieved excellent test coverage</li> 
                     <li>Integrated test results with QASE, providing real-time visibility into test status and metrics</li>
-                    <li>Implemented Jenkins email notifications that improved team communication and reduced issue response time by 50%</li>
+                    <li>Implemented Jenkins email notifications that improved team communication and significantly reduced issue response time</li>
                   </ul>
                 </div>
               </li>
@@ -97,8 +95,8 @@ const BragList: React.FC = () => {
                 <div>
                   <h4 className="font-semibold">Cross-Team Collaboration</h4>
                   <ul className="list-disc pl-6 text-base mt-2 space-y-2">
-                    <li>Collaborated with development teams to implement shift-left testing, catching 40% more bugs in early development</li>
-                    <li>Consulted with UX team to improve accessibility testing, helping achieve WCAG AA compliance</li>
+                    <li>Collaborated with development teams to implement shift-left testing, catching many more bugs in early development</li>
+                    <li>Consulted with UX team to improve accessibility testing, helping achieve WCAG compliance</li>
                   </ul>
                 </div>
               </li>
@@ -111,15 +109,14 @@ const BragList: React.FC = () => {
             <h3 className="text-xl font-bold text-yellow-700 dark:text-yellow-400 mb-4 flex items-center">
               <BarChart className="mr-2" size={20} /> Business Impact
             </h3>
-            <ul className="space-y-6 text-lg pl-3">
-              <li className="flex items-start gap-3 bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg">
+            <ul className="space-y-6 text-lg pl-3">              <li className="flex items-start gap-3 bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg">
                 <ArrowRight className="text-indigo-600 mt-1 flex-shrink-0" size={24} />
                 <div>
                   <h4 className="font-semibold">Quality Improvements</h4>
                   <ul className="list-disc pl-6 text-base mt-2 space-y-2">
-                    <li>Reduced post-release defects by 65% through improved automated test coverage</li>
+                    <li>Significantly reduced post-release defects through improved automated test coverage</li>
                     <li>Shortened release cycles from bi-weekly to weekly by optimizing QA processes</li>
-                    <li>Improved customer satisfaction scores by 18% due to reduced bugs in production</li>
+                    <li>Improved customer satisfaction by delivering more stable software with fewer bugs</li>
                   </ul>
                 </div>
               </li>
